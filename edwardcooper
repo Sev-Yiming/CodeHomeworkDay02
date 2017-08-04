@@ -1,0 +1,109 @@
+PShape sunlight01;
+PShape sunlight02;
+PShape door;
+PShape floor;
+PShape wall01;
+PShape sunlight03;
+
+void setup() {
+  //colored the sea
+  size(800, 600);
+  background(47,107,161);
+  fill(254,253,232);
+  noStroke();
+  sunlight01 = createShape();  
+  sunlight01.beginShape(TRIANGLE_STRIP);
+  sunlight01.vertex(560, 0);
+  sunlight01.vertex(180, 320);
+  sunlight01.vertex(180, 480);
+  sunlight01.vertex(560, 440);
+  sunlight01.vertex(560, 0);
+  sunlight01.endShape();
+  
+  fill(237,232,168);
+  noStroke();
+  sunlight02 = createShape();  
+  sunlight02.beginShape(TRIANGLE_STRIP);
+  sunlight02.vertex(180,480);
+  sunlight02.vertex(300,540);
+  sunlight02.vertex(760,520);
+  sunlight02.vertex(760,540);
+  sunlight02.vertex(300,540);
+  sunlight02.vertex(760,520);
+  sunlight02.vertex(760,540);
+  sunlight02.vertex(180,480);
+  sunlight02.vertex(560,440);
+  sunlight02.vertex(760,520);
+  sunlight02.endShape();
+  
+  fill(99,107,126);
+  noStroke();
+  door = createShape();  
+  door.beginShape(TRIANGLE_STRIP);
+  door.vertex(760,0);
+  door.vertex(760,560);
+  door.vertex(800,0);
+  door.vertex(800,600);
+  door.endShape();
+  
+  fill(94,76,38);
+  noStroke();
+  floor = createShape();  
+  floor.beginShape(TRIANGLE_STRIP);
+  floor.vertex(180,480);
+  floor.vertex(0,500);
+  floor.vertex(300,540);
+  floor.vertex(0,600);
+  floor.vertex(800,600);
+  floor.vertex(760,540);
+  floor.vertex(300,540);
+  floor.endShape();
+  
+  fill(124,133,162);
+  noStroke();
+  wall01 = createShape();  
+  wall01.beginShape(TRIANGLE_STRIP);
+  wall01.vertex(560,0);
+  wall01.vertex(100,0);
+  wall01.vertex(180,320);
+  wall01.vertex(100,460);
+  wall01.vertex(180,480);
+  wall01.endShape();
+  
+  fill(211,225,200);
+  noStroke();
+  sunlight03 = createShape();  
+  sunlight03.beginShape(TRIANGLE_STRIP);
+  sunlight03.vertex(80,100);
+  sunlight03.vertex(40,120);
+  sunlight03.vertex(80,160);
+  sunlight03.vertex(40,240);
+  sunlight03.vertex(100,220);
+  sunlight03.vertex(100,160);
+  sunlight03.vertex(80,160);
+  sunlight03.endShape();
+  
+}
+
+void draw() {
+
+  shape(sunlight01, 0, 0);
+  shape(sunlight02, 0, 0);
+  shape(door, 0, 0);
+  fill(62,93,62);
+  rect(0,400,180,120);
+  shape(floor, 0, 0);
+  shape(wall01, 0, 0);
+  fill(185,213,225);
+  noStroke();
+  rect(560,0,200,180);
+  fill(162,173,169);
+  rect(0,0,100,400);
+  fill(28,12,22);
+  rect(60,240,40,220);
+  fill(143,40,35);
+  rect(0,300,60,100);
+  fill(168,145,95);
+  rect(80,80,20,80);
+  shape(sunlight03, 0, 0);
+}
